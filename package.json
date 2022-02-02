@@ -1,0 +1,13 @@
+{
+  "name": "formulario-con-cypress-y-tailwindcss",
+  "version": "1.0.0",
+  "description": "Formulario de vanilla Js testeado con cypress y estilizado con tailwindcss",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
