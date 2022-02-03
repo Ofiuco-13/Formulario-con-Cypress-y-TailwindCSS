@@ -21,5 +21,17 @@ describe("Verifica la funcionalidad del formulario", () => {
     cy.get("#menor-edad").should("have.text", "15");
     cy.get("#promedio-edad").should("have.text", "30");
 
+    cy.get("#agregar-input").dblclick();
+
+    cy.get(".salario input").eq(0).type(350000);
+    cy.get(".salario input").eq(1).type(240000);
+
+    cy.get("#calcular-salarios").click();
+
+    cy.get("#mayor-salario-anual").should("have.text", "Mayor salario anual: 350000");
+    cy.get("#menor-salario-anual").should("have.text", "Menor salario anual: 240000");
+    cy.get("#salario-anual-promedio").should("have.text", "Salario anual promedio: 295000");
+    cy.get("#salario-mensual-promedio").should("have.text", "Salario mensual promedio: 49167");
+    
   });
 });

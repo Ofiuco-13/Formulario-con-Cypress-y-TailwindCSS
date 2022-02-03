@@ -51,7 +51,7 @@ function obtenerSalarioAnualPromedio (salarios) {
     for (let i =0; i < salarios.length; i++) {
         acumulador += salarios[i];
     }
-    return acumulador / salarios.length;
+    return Math.round(acumulador / salarios.length);
 }
 
 function obtenerSalarioMensualPromedio (salarios) {
@@ -59,5 +59,5 @@ function obtenerSalarioMensualPromedio (salarios) {
     for (let i = 0; i < salarios.length; i++) {
         acumulador += salarios[i];
     }
-    return acumulador / 12;
+    return Math.round(acumulador / 12);
 }
