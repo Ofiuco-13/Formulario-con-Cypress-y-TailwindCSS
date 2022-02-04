@@ -121,7 +121,7 @@ function redireccionar() {
 
 function mostrarBotonCalculo(cantidadIntegrantes) {
   if (cantidadIntegrantes > 0) {
-    document.querySelector("#calcular").className = "";
+    document.querySelector("#calcular").className = "bg-cyan-500 shadow-lg  p-1.5 rounded shadow-cyan-500/50 text-white font-bold hover:bg-cyan-400 duration-300";
   }
 }
 
@@ -140,14 +140,16 @@ function generarIntegrantes(cantidadIntegrantes) {
 
 function generarIntegrante(i) {
   const $div = document.createElement("div");
-  $div.className = "integrante";
+  $div.className = "integrante font-bold mb-4";
 
   const $label = document.createElement("label");
   $label.textContent = "Edad del integrante # " + (i + 1);
+  $label.className = "mr-2"
 
   const $input = document.createElement("input");
   $input.type = "number";
   $input.name = "edades";
+  $input.className = "outline-none  border-2 border-cyan-500 rounded p-1 focus:border-cyan-800";
 
   $div.appendChild($label);
   $div.appendChild($input);
@@ -185,7 +187,7 @@ function resetear() {
 
 function generarSalario() {
   const $div = document.createElement("div");
-  $div.className = "salario";
+  $div.className = "salario font-bold mr-4 mb-4";
 
   const $label = document.createElement("label");
   $label.textContent = "Salario # ";
@@ -195,6 +197,7 @@ function generarSalario() {
   $input.placeholder = "Ej: 350000";
   $input.min = "0";
   $input.name = "salarios";
+  $input.className ="outline-none  border-2 border-cyan-500 rounded p-1 focus:border-cyan-800";
 
   $div.appendChild($label);
   $div.appendChild($input);
@@ -274,7 +277,7 @@ function ocultarAnalisis() {
 
 function mostrarBotonResetear(cantidadIntegrantes) {
   if (cantidadIntegrantes > 0) {
-    document.querySelector("#resetear").className = "";
+    document.querySelector("#resetear").className = "bg-cyan-500 shadow-lg  p-1.5 rounded shadow-cyan-500/50 text-white font-bold hover:bg-cyan-600 duration-300";
   }
 }
 
@@ -283,7 +286,7 @@ function ocultarBotonResetear() {
 }
 
 function mostrarBotonAgregar() {
-  document.querySelector("#agregar-input").className = "";
+  document.querySelector("#agregar-input").className = "bg-cyan-500 shadow-lg  p-1.5 rounded shadow-cyan-500/50 text-white font-bold hover:bg-cyan-400 duration-300";
 }
 
 function ocultarBotonAgregar() {
@@ -291,7 +294,7 @@ function ocultarBotonAgregar() {
 }
 
 function mostrarBotonCalcularSalarios() {
-  document.querySelector("#calcular-salarios").className = "";
+  document.querySelector("#calcular-salarios").className = "bg-cyan-500 shadow-lg  p-1.5 rounded shadow-cyan-500/50 text-white font-bold hover:bg-cyan-400 duration-300";
 }
 
 function ocultarBotonCalcularSalarios() {
